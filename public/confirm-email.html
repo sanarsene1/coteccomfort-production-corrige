@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f9f5">
+    <title>Confirmation e-mail · COTEC</title>
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+      body.auth-page-body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, #eef7ee 0%, #f7f9f5 100%);
+        font-family: 'Manrope', sans-serif;
+      }
+      .confirm-card {
+        width: min(560px, calc(100vw - 32px));
+        background: rgba(255,255,255,0.9);
+        border: 1px solid rgba(11, 78, 40, 0.12);
+        border-radius: 22px;
+        box-shadow: 0 18px 45px rgba(12, 44, 25, 0.08);
+        padding: 32px 28px;
+        text-align: center;
+      }
+      .confirm-card__badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: #eaf9ee;
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+      .confirm-card h1 {
+        margin: 0 0 12px;
+        font-size: clamp(1.7rem, 3vw, 2.4rem);
+        color: #112317;
+      }
+      .confirm-card p {
+        margin: 0 0 20px;
+        color: #466056;
+        line-height: 1.7;
+        font-size: 1rem;
+      }
+      .confirm-card__actions {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .confirm-card button,
+      .confirm-card a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 22px;
+        border-radius: 12px;
+        border: none;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .confirm-card .primary {
+        background: #1a5e3a;
+        color: #fff;
+      }
+      .confirm-card .secondary {
+        background: #edf2ee;
+        color: #123621;
+      }
+      .confirm-card .primary:hover,
+      .confirm-card .secondary:hover {
+        transform: translateY(-1px);
+      }
+      .confirm-card__status {
+        margin-top: 16px;
+        font-weight: 700;
+        color: #1a5e3a;
+      }
+      .confirm-card__muted {
+        margin-top: 12px;
+        font-size: 0.9rem;
+        color: #5d7063;
+      }
+    </style>
+  </head>
+  <body class="auth-page-body">
+    <main class="confirm-card" aria-live="polite">
+      <div class="confirm-card__badge">✉️</div>
+      <h1>Confirmation de votre e-mail</h1>
+      <p id="confirm-message">
+        Ouvrez votre messagerie Gmail et cliquez sur le bouton “Confirmer l’e-mail” que nous avons envoyé.
+        Une fois validé, vous pourrez vous connecter à votre compte.
+      </p>
+      <div class="confirm-card__actions">
+        <a class="primary" href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener">Ouvrir Gmail</a>
+        <a class="secondary" href="/account.html">Aller à la connexion</a>
+      </div>
+      <div class="confirm-card__status" id="confirm-status"></div>
+      <div class="confirm-card__muted">Si le lien a bien été confirmée, vous pourrez ensuite vous connecter normalement.</div>
+    </main>
+
+    <script>
+      window.COTEC_USE_LOCAL_AUTH = true;
+      window.COTEC_SUPABASE = null;
+    </script>
+    <script>
+      const statusEl = document.getElementById('confirm-status');
+      const messageEl = document.getElementById('confirm-message');
+
+      statusEl.textContent = 'Authentification locale activée.';
+      messageEl.textContent = 'Le compte est maintenant géré localement avec MySQL et Laragon. Vous pouvez retourner à la connexion.';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f9f5">
+    <meta name="description" content="Connexion et création de compte COTEC Comfort Technologies.">
+    <title>Mon compte · COTEC Comfort Technologies</title>
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body class="auth-page-body">
+    <div class="auth-page-shell">
+      <main class="auth-page__left" aria-label="Section de connexion">
+        <section class="auth-card" aria-labelledby="account-page-title">
+          <div class="auth-brand" aria-label="Logo COTEC">
+            <div class="auth-brand__mark">
+              <img src="/assets/img/apple-touch-icon.png" alt="COTEC" />
+            </div>
+            <div class="auth-brand__text">
+              <strong>COTEC</strong>
+              <span>Comfort Technologies</span>
+            </div>
+          </div>
+
+          <div class="auth-card__header">
+            <p class="account-page__eyebrow">Mon compte</p>
+            <h1 id="account-page-title">Créer votre compte</h1>
+          </div>
+
+          <div class="auth-providers" aria-label="Options de connexion">
+            <button class="auth-provider auth-provider--google" type="button">
+              <span class="auth-provider__mark" aria-hidden="true">
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <path fill="#EA4335" d="M24 9.5c3.54 0 6.7 1.22 9.2 3.59l6.85-6.85C35.9 2.38 30.43 0 24 0 14.63 0 6.53 5.38 2.56 13.22l7.98 6.2C12.13 13.73 17.56 9.5 24 9.5z"/>
+                  <path fill="#4285F4" d="M46.5 24.55c0-1.56-.14-3.05-.4-4.48H24v8.48h12.78c-.54 2.8-2.14 5.17-4.58 6.76l7.4 5.74c4.31-3.96 6.9-9.8 6.9-17.5z"/>
+                  <path fill="#FBBC05" d="M32.2 35.9c-2.45 1.65-5.57 2.6-8.2 2.6-6.43 0-11.86-4.23-13.8-9.9l-7.96-6.2C-1.14 30.68 2.42 42 12.2 48c5.47 3.42 12.6 5.06 19.07 4.12 3.74-.57 7.3-2.05 10.3-4.36l-9.37-7.86z"/>
+                  <path fill="#34A853" d="M24 48c5.45 0 10.03-1.8 13.38-4.93l-7.4-5.74c-2.08 1.41-4.74 2.17-5.98 2.17-6.44 0-11.87-4.23-13.8-9.9l-7.98 6.2C2.69 41.86 11.48 48 24 48z"/>
+                </svg>
+              </span>
+              <span>Continuer avec Google</span>
+            </button>
+          </div>
+
+          <div class="account-page__divider">ou</div>
+
+          <form class="account-page__form" id="auth-page-form" data-auth-mode="login" novalidate>
+            <label class="account-page__field account-page__field--username">
+              <span>Nom d’utilisateur</span>
+              <input type="text" name="username" placeholder="Nom d’utilisateur" autocomplete="username">
+            </label>
+            <label>
+              <span>E-mail</span>
+              <input type="email" name="email" placeholder="E-mail" required>
+            </label>
+            <label>
+              <span>Mot de passe</span>
+              <input type="password" name="password" placeholder="••••••••" required>
+            </label>
+            <label class="account-page__field account-page__field--confirm-password">
+              <span>Confirmer le mot de passe</span>
+              <input type="password" name="confirmPassword" placeholder="Confirmer le mot de passe">
+            </label>
+            <div class="account-page__actions">
+              <button class="account-page__submit" type="submit">Se connecter</button>
+              <a href="/index.html" class="account-page__back-home" style="display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; border-radius:12px; background:#edf2ee; color:#123621; text-decoration:none; font-weight:700; margin-top:12px;">Retour à l’accueil</a>
+            </div>
+            <p class="account-page__secondary-text"><span class="account-page__secondary-text--prefix" data-signup="Vous avez déjà un compte ?" data-login="Vous n’avez pas de compte ?">Vous n’avez pas de compte ?</span> <button type="button" data-mode="signup" class="account-page__inline-toggle">Créer un compte</button></p>
+            <p class="account-page__notice" id="auth-page-notice" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+
+      <aside class="ct-panel auth-visual" aria-hidden="true">
+        <div class="ct-blob ct-b1"></div>
+        <div class="ct-blob ct-b2"></div>
+        <div class="ct-blob ct-b3"></div>
+        <div class="ct-grid"></div>
+
+        <div class="ct-orbit">
+          <span class="ct-ring ct-r1"></span>
+          <span class="ct-ring ct-r2"></span>
+          <span class="ct-dot ct-d1"></span>
+          <span class="ct-dot ct-d2"></span>
+          <div class="ct-logo"><img src="/assets/img/apple-touch-icon.png" alt="CT" /></div>
+        </div>
+
+        <div class="ct-card">
+          <div class="ct-card-head">
+            <span class="ct-avatar"><img src="/assets/img/apple-touch-icon.png" alt="CT" /></span>
+            <span>cotec IA</span>
+            <span class="ct-live"></span>
+          </div>
+          <p class="ct-typing"><span>Bienvenue sur cotec, je suis là pour vous aider.</span></p>
+          <button class="ct-send" tabindex="-1">↑</button>
+        </div>
+
+        <ul class="ct-chips">
+          <li>Point à point</li>
+          <li>Starlink &amp; Réseau</li>
+          <li>Assisté par l'IA</li>
+        </ul>
+        <p class="ct-where">Butembo · Nord-Kivu</p>
+      </aside>
+    </div>
+
+    <script>
+      window.COTEC_USE_LOCAL_AUTH = true;
+      window.COTEC_SUPABASE = null;
+    </script>
+    <script src="/assets/js/app.js" defer></script>
+  </body>
+</html>

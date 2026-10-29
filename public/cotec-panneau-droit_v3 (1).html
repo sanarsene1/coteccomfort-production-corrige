@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>cotec – Panneau animé</title>
+  <link rel="stylesheet" href="cotec-panneau-droit.css" />
+  <style>
+    /* Démo seulement : fond vert foncé et panneau visible même sur petit écran.
+       Dans votre vraie page, ne copiez PAS ce bloc : le CSS cache le panneau sous 900px. */
+    body{background:#06281c}
+    @media (max-width:900px){
+      .ct-panel{display:flex !important;width:min(640px,100%);min-height:calc(100vh - 32px)}
+    }
+  </style>
+</head>
+<body>
+  <!-- Placez ce bloc dans la colonne de DROITE de votre page connexion / inscription -->
+  <aside class="ct-panel" aria-hidden="true">
+    <div class="ct-blob ct-b1"></div>
+    <div class="ct-blob ct-b2"></div>
+    <div class="ct-blob ct-b3"></div>
+    <div class="ct-grid"></div>
+
+    <div class="ct-orbit">
+      <span class="ct-ring ct-r1"></span>
+      <span class="ct-ring ct-r2"></span>
+      <span class="ct-dot ct-d1"></span>
+      <span class="ct-dot ct-d2"></span>
+      <div class="ct-logo">CT</div>
+    </div>
+
+    <div class="ct-card">
+      <div class="ct-card-head">
+        <span class="ct-avatar">CT</span>
+        <span>cotec IA</span>
+        <span class="ct-live"></span>
+      </div>
+      <p class="ct-typing"><span>Bienvenue sur cotec, je suis là pour vous aider.</span></p>
+      <button class="ct-send" tabindex="-1">&#8593;</button>
+    </div>
+
+    <ul class="ct-chips">
+      <li>Point à point</li><li>Starlink &amp; Réseau</li><li>Assisté par l'IA</li>
+    </ul>
+    <p class="ct-where">Butembo · Nord-Kivu</p>
+  </aside>
+</body>
+</html>

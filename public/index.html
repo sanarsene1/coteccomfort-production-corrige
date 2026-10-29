@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9f5">
+  <meta name="description" content="COMFORT TECHNOLOGIES COTEC — Internet haut débit, Starlink, réseaux sans fil et solutions solaires à Butembo, Nord-Kivu. Abonnements dès 30 $/mois.">
+  <title>COMFORT TECHNOLOGIES COTEC — Connectés à votre avenir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/motion.css">
+  <link rel="stylesheet" href="/assets/css/cotec.css">
+  <link rel="stylesheet" href="/assets/css/chargement-comfort.css">
+  <style>
+    /* Disposition Antixor : les onglets Installation/Maintenance/Abonnement chevauchent le bas de l'image d'accueil */
+    .hero {
+      height: auto !important;
+      min-height: auto !important;
+      max-height: none !important;
+    }
+    .hero-content,
+    .hero-content.hero-welcome,
+    .hero-content.hero-brand-only {
+      padding-top: 48px !important;
+      padding-bottom: 76px !important;
+      height: auto !important;
+    }
+    .equipment-finder {
+      position: relative !important;
+      z-index: 5 !important;
+      padding: 0 0 36px !important;
+      background: #f2f6f0 !important;
+    }
+    .finder-panel {
+      position: relative !important;
+      z-index: 2 !important;
+      margin-top: -56px !important;
+      border-radius: 20px !important;
+      background: #ffffff !important;
+      box-shadow: 0 18px 45px rgba(20, 48, 30, 0.14), 0 4px 14px rgba(20, 48, 30, 0.06) !important;
+    }
+    .finder-tabs {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      padding: 12px 16px !important;
+      border-bottom: 1px solid #edf1eb !important;
+      background: #ffffff !important;
+    }
+    .finder-tab {
+      border-radius: 10px !important;
+    }
+    .hero-pagination {
+      display: none !important;
+    }
+    @media (max-width: 980px) {
+      .hero-content,
+      .hero-content.hero-welcome,
+      .hero-content.hero-brand-only {
+        padding-top: 38px !important;
+        padding-bottom: 72px !important;
+      }
+      .finder-panel {
+        margin-top: -52px !important;
+      }
+    }
+    @media (max-width: 760px) {
+      .hero-content,
+      .hero-content.hero-welcome,
+      .hero-content.hero-brand-only {
+        padding-top: 30px !important;
+        padding-bottom: 66px !important;
+      }
+      .equipment-finder {
+        padding: 0 0 24px !important;
+      }
+      .finder-panel {
+        margin-top: -46px !important;
+        border-radius: 16px !important;
+      }
+      .finder-tabs {
+        padding: 10px 10px !important;
+      }
+    }
+    @media (max-width: 430px) {
+      .hero-content,
+      .hero-content.hero-welcome,
+      .hero-content.hero-brand-only {
+        padding-top: 24px !important;
+        padding-bottom: 60px !important;
+      }
+      .finder-panel {
+        margin-top: -42px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app-loader" class="app-loader" role="status" aria-label="Chargement du site">
+    <div class="app-loader__stars"></div>
+    <div class="app-loader__stage">
+      <span class="app-loader__wave"></span>
+      <span class="app-loader__wave"></span>
+      <span class="app-loader__wave"></span>
+      <div class="app-loader__orbit app-loader__orbit--outer">
+        <span class="app-loader__sat"></span>
+      </div>
+      <div class="app-loader__orbit app-loader__orbit--inner">
+        <span class="app-loader__sat"></span>
+        <span class="app-loader__beam"></span>
+      </div>
+      <div class="app-loader__disc" aria-hidden="true"></div>
+    </div>
+    <div class="app-loader__info">
+      <p class="app-loader__brand">COMFORT TECHNOLOGIES COTEC</p>
+      <p class="app-loader__status">Chargement…</p>
+      <div class="app-loader__row">
+        <div class="app-loader__bar"></div>
+        <div class="app-loader__signal"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <p class="app-loader__hint">Internet haut débit par satellite</p>
+    </div>
+  </div>
+  <div class="announcement"><span class="status-dot"></span><span data-fr="Internet rapide, installation professionnelle à Butembo / Nord-Kivu" data-en="Fast internet, professionally installed in Butembo / North Kivu">Internet rapide, installation professionnelle à Butembo / Nord-Kivu</span><a href="https://wa.me/243817483857" data-fr="Besoin d’être connecté ? ↗" data-en="Need to get connected? ↗">Besoin d’être connecté ? ↗</a></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="COMFORT TECHNOLOGIES COTEC, accueil">
+      <img class="brand-logo" src="/assets/img/logo-lockup.png" alt="COMFORT TECHNOLOGIES COTEC" width="640" height="152">
+    </a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+      <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+      <a href="shop.html" data-fr="Boutique" data-en="Shop">Boutique</a>
+      <a href="#apropos" data-fr="À propos" data-en="About">À propos</a>
+      <div class="services-nav-item">
+        <button class="services-menu-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="services-menu"><span data-fr="Nos services" data-en="Services">Nos services</span><span class="services-menu-chevron" aria-hidden="true">⌄</span></button>
+        <div class="services-menu" id="services-menu" hidden>
+          <a href="service-detail.html?service=installation"><span class="services-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20v-7M12 13l-4-4M12 13l4-4M5 9a7 7 0 0 1 14 0"/><circle cx="12" cy="20" r="1.2"/></svg></span><span><strong data-fr="Installation" data-en="Installation">Installation</strong><small data-fr="Starlink, antennes et Wi-Fi" data-en="Starlink, antennas & Wi-Fi">Starlink, antennes et Wi-Fi</small></span></a>
+          <a href="service-detail.html?service=maintenance"><span class="services-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5a4 4 0 0 0-5 5L4 16l4 4 5.5-5.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg></span><span><strong data-fr="Maintenance" data-en="Maintenance">Maintenance</strong><small data-fr="Diagnostic et dépannage" data-en="Diagnostics & repairs">Diagnostic et dépannage</small></span></a>
+          <a href="service-detail.html?service=abonnement"><span class="services-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9a14 14 0 0 1 18 0M6 12.5a9.5 9.5 0 0 1 12 0M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1.2"/></svg></span><span><strong data-fr="Abonnement & réabonnement" data-en="Subscribe & renew">Abonnement & réabonnement</strong><small data-fr="Connexion dès 30 $/mois" data-en="Plans from $30/month">Connexion dès 30 $/mois</small></span></a>
+          <a href="stage.html"><span class="services-menu-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.5 12 5l9 4.5-9 4.5z"/><path d="M7 12.2V16c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5v-3.8"/><path d="M21 9.5V14"/></svg></span><span><strong data-fr="Stage &amp; Formation" data-en="Internship &amp; Training">Stage &amp; Formation</strong><small data-fr="Stage académique, professionnel ou formation" data-en="Academic, professional or training">Stage académique, professionnel ou formation</small></span></a>
+        </div>
+      </div>
+      <a href="#cotec-ai" data-fr="cotec IA" data-en="cotec IA">cotec IA</a>
+      <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+      <div class="nav-end"><button class="account-trigger" type="button" aria-label="Ouvrir le compte" aria-haspopup="dialog" aria-controls="account-modal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm-7 8a7 7 0 0 1 14 0"/><circle cx="12" cy="8" r="3" fill="none"/></svg></button><div class="language-switch" aria-label="Choisir la langue"><button class="lang-btn active" data-lang="fr">FR</button><span>/</span><button class="lang-btn" data-lang="en">EN</button></div><a class="nav-cta" href="#tarifs" data-fr="NOS OFFRES <span>↗</span>" data-en="OUR PLANS <span>↗</span>">NOS OFFRES <span>↗</span></a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-visual" aria-hidden="true">
+        <img class="hero-image is-active" src="/assets/img/IMG_on_cotec.jpg" alt="" fetchpriority="high">
+        <img class="hero-image" src="/assets/img/IMG_on_cotec_2.jpg" alt="" loading="lazy" decoding="async">
+        <img class="hero-image" src="/assets/img/IMG_on-cotec8.jpg" alt="" loading="lazy" decoding="async">
+        <img class="hero-image" src="/assets/img/OMG_on_cotec_7.jpg" alt="" loading="lazy" decoding="async">
+        <img class="hero-image" src="/assets/img/IMG_on_cotec6.jpg" alt="" loading="lazy" decoding="async">
+        <img class="hero-image" src="/assets/img/OMG_on_cotec9.jpg" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content wrap">
+        <p class="eyebrow light"><span></span><span data-fr="CONNECTIVITÉ · RÉSEAUX · ÉNERGIE" data-en="CONNECTIVITY · NETWORKS · ENERGY">CONNECTIVITÉ · RÉSEAUX · ÉNERGIE</span></p>
+        <h1 data-fr="Le monde avance.<br><em>Restez connectés.</em>" data-en="The world moves fast.<br><em>Stay connected.</em>">Le monde avance.<br><em>Restez connectés.</em></h1>
+        <p class="hero-lead" data-fr="Internet haut débit et installations fiables, pensés pour les maisons, commerces et entreprises de Butembo et du Nord-Kivu." data-en="High-speed internet and reliable installations for homes, businesses and organizations in Butembo and North Kivu.">Internet haut débit et installations fiables, pensés pour les maisons, commerces et entreprises de Butembo et du Nord-Kivu.</p>
+        <div class="hero-actions"><a class="button button-lime" href="#services" data-fr="Découvrir nos solutions <span>↗</span>" data-en="Explore our solutions <span>↗</span>">Découvrir nos solutions <span>↗</span></a><a class="button button-ghost" href="#" target="_blank" rel="noopener" data-whatsapp-key="plan_installation" data-whatsapp-fallback="Bonjour COTEC, je souhaite planifier une installation." data-fr="Planifier une installation" data-en="Schedule an installation">Planifier une installation</a></div>
+        <div class="finder-trust" aria-label="Nos engagements">
+          <div class="trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9a14 14 0 0 1 18 0M6 12.5a9.5 9.5 0 0 1 12 0M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1"/></svg><span>COMFORT TECHNOLOGIES COTEC · ISP · Butembo</span></div>
+          <div class="trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7v4a2 2 0 0 0 2 2h2v-6H6m12 0h-3v6h2a2 2 0 0 0 2-2v-4a7 7 0 0 0-7-7Zm-4 17h2"/></svg><span data-fr="Aucun frais caché" data-en="No hidden fees">Aucun frais caché</span></div>
+          <div class="trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/><circle cx="12" cy="12" r="5"/></svg><span data-fr="Assistance 24 h/24, 7 j/7" data-en="24/7 support">Assistance 24 h/24, 7 j/7</span></div>
+          <div class="trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 7 3-3 3 3-3 3m-2-2L8 15m-3-3-3 3 4 4 3-3m-2-2 4 4"/></svg><span data-fr="Installation facile" data-en="Easy installation">Installation facile</span></div>
+          <div class="trust-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></svg><span data-fr="Réseau sécurisé" data-en="Fully secured">Réseau sécurisé</span></div>
+        </div>
+        <div class="hero-note"><span class="note-line"></span><span data-fr="Votre connexion, notre priorité." data-en="Your connection is our priority.">Votre connexion, notre priorité.</span></div>
+      </div>
+      <div class="hero-stamp"><img src="/assets/img/logo-mark.png" alt="" width="64" height="70"><span class="sr-only">CT</span><small>TECHNOLOGIE<br>DEPUIS BUTEMBO</small></div>
+      <a class="scroll-cue" href="#apropos"><span></span><span data-fr="DÉFILER POUR DÉCOUVRIR" data-en="SCROLL TO DISCOVER">DÉFILER POUR DÉCOUVRIR</span></a>
+    </section>
+
+    <section class="equipment-finder" aria-labelledby="finder-title">
+      <div class="wrap">
+        <div class="finder-panel">
+          <div class="finder-tabs" role="tablist" aria-label="Type de demande">
+            <button class="finder-tab is-active" type="button" role="tab" aria-selected="true" data-mode="installation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 7 3-3 3 3-3 3m-2-2L8 15m-3-3-3 3 4 4 3-3m-2-2 4 4"/></svg><span data-fr="Installation" data-en="Installation">Installation</span></button>
+            <button class="finder-tab" type="button" role="tab" aria-selected="false" data-mode="maintenance"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5a4 4 0 0 0-5 5L4 16l4 4 5.5-5.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg><span data-fr="Maintenance" data-en="Maintenance">Maintenance</span></button>
+            <button class="finder-tab" type="button" role="tab" aria-selected="false" data-mode="abonnement"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18m-9 4v3m-1.5-1.5h3"/></svg><span data-fr="Abonnement" data-en="Subscription">Abonnement</span></button>
+          </div>
+          <form class="finder-form" id="equipment-finder-form" novalidate>
+            <label class="finder-field"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span><small data-fr="Ville" data-en="Town">Ville</small><select name="area" required><option value="" data-fr="Choisir une ville" data-en="Select a town">Choisir une ville</option><option>Butembo</option><option>Beni</option><option>Kasindi</option></select></span></label>
+            <label class="finder-field"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 4l9 6.5V20H3zM8 20v-6h8v6M7 10h.01M17 10h.01"/></svg><span><small id="finder-type-label" data-fr="Type d’équipement" data-en="Equipment type">Type d’équipement</small><select name="requestType" required><option value="conseil" selected data-fr="Je ne sais pas encore — conseillez-moi" data-en="I’m not sure yet — please advise me">Je ne sais pas encore — conseillez-moi</option><option value="Starlink">Starlink</option><option value="TP-Link / MikroTik">TP-Link / MikroTik</option><option value="LiteBeam / NanoStation">LiteBeam / NanoStation</option><option value="Wi-Fi" data-fr="Réseau Wi-Fi" data-en="Wi-Fi network">Réseau Wi-Fi</option><option value="Solaire" data-fr="Équipement solaire" data-en="Solar equipment">Équipement solaire</option><option value="Autre" data-fr="Autre" data-en="Other">Autre</option></select></span></label>
+            <label class="finder-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><small data-fr="Date souhaitée" data-en="Preferred date">Date souhaitée</small><input type="date" name="date" aria-label="Date souhaitée" required></span></label>
+            <button class="finder-submit" type="submit"><span data-fr="Continuer" data-en="Continue">Continuer</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          </form>
+        </div>
+
+        <div class="finder-brands">
+          <div class="brands-heading"><div><p class="finder-kicker" data-fr="ÉQUIPEMENTS DE CONFIANCE" data-en="TRUSTED EQUIPMENT">ÉQUIPEMENTS DE CONFIANCE</p><h2 id="finder-title" data-fr="Choisissez votre marque préférée" data-en="Choose your favorite brand">Choisissez votre marque préférée</h2><p data-fr="Nous vous aidons à trouver la solution adaptée à votre site." data-en="We help you find the right solution for your site.">Nous vous aidons à trouver la solution adaptée à votre site.</p></div><a href="shop.html"><span data-fr="Voir la boutique" data-en="Visit the shop">Voir la boutique</span><span aria-hidden="true">→</span></a></div>
+          <div class="brand-tiles" aria-label="Marques disponibles">
+            <div class="brand-tile"><span class="brand-rating" aria-label="Note indicative : 8,5 sur 10">8,5/10 <span aria-hidden="true">★</span></span><span class="brand-glyph tp-link-glyph">●</span><strong>tp-link</strong></div>
+            <div class="brand-tile"><span class="brand-rating" aria-label="Note indicative : 9 sur 10">9/10 <span aria-hidden="true">★</span></span><span class="brand-glyph mikrotik-glyph">M</span><strong>MikroTik</strong></div>
+            <div class="brand-tile"><span class="brand-rating" aria-label="Note indicative : 9 sur 10">9/10 <span aria-hidden="true">★</span></span><span class="brand-glyph ubiquiti-glyph">◉</span><strong>Ubiquiti</strong><small>NanoStation</small></div>
+            <div class="brand-tile"><span class="brand-rating" aria-label="Note indicative : 9 sur 10">9/10 <span aria-hidden="true">★</span></span><span class="brand-glyph cambium-glyph">◉</span><strong>Cambium</strong></div>
+            <div class="brand-tile"><span class="brand-rating" aria-label="Note indicative : 7,5 sur 10">7,5/10 <span aria-hidden="true">★</span></span><span class="brand-glyph wavlink-glyph">∿</span><strong>WavLink</strong></div>
+            <div class="brand-tile"><span class="brand-rating" aria-label="Note indicative : 8 sur 10">8/10 <span aria-hidden="true">★</span></span><span class="brand-glyph tenda-glyph">T</span><strong>Tenda</strong></div>
+            <div class="brand-tile"><span class="brand-rating" aria-label="Note indicative : 8,5 sur 10">8,5/10 <span aria-hidden="true">★</span></span><span class="brand-glyph starlink-glyph">✳</span><strong>Starlink</strong></div>
+            <div class="brand-tile"><span class="brand-rating" aria-label="Note indicative : 8,5 sur 10">8,5/10 <span aria-hidden="true">★</span></span><span class="brand-glyph hikvision-glyph">H</span><strong>Hikvision</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section-pad" id="apropos">
+      <div class="wrap about-grid">
+        <div class="about-values">
+          <p class="eyebrow"><span></span><span data-fr="NOS ENGAGEMENTS" data-en="OUR COMMITMENT">NOS ENGAGEMENTS</span></p>
+          <div class="about-value-list">
+            <div class="about-value"><strong>01</strong><span data-fr="Conseil adapté à votre site" data-en="Advice tailored to your site">Conseil adapté à votre site</span></div>
+            <div class="about-value"><strong>02</strong><span data-fr="Installation propre et soignée" data-en="Careful, professional installation">Installation propre et soignée</span></div>
+            <div class="about-value"><strong>03</strong><span data-fr="Accompagnement après installation" data-en="Support after installation">Accompagnement après installation</span></div>
+          </div>
+          <p class="about-local" data-fr="Une équipe de proximité, au service du Nord-Kivu." data-en="Local expertise, serving North Kivu.">Une équipe de proximité, au service du Nord-Kivu.</p>
+        </div>
+        <figure class="about-photo">
+          <video class="about-video" src="/assets/video/logo_comfort_anime.mp4" autoplay muted loop playsinline preload="auto" aria-label="Vidéo animée du logo COMFORT TECHNOLOGIES COTEC"></video>
+          <figcaption><span data-fr="CONNECTIVITÉ · RÉSEAUX WI-FI" data-en="CONNECTIVITY · WI-FI NETWORKS">CONNECTIVITÉ · RÉSEAUX WI-FI</span><span>BUTEMBO · NORD-KIVU</span></figcaption>
+          <span class="about-photo-mark" aria-hidden="true">CT / 01</span>
+        </figure>
+        <div class="intro-copy">
+          <p class="eyebrow"><span></span><span data-fr="À PROPOS DE COMFORT TECHNOLOGIES COTEC" data-en="ABOUT COMFORT TECHNOLOGIES COTEC">À PROPOS DE COMFORT TECHNOLOGIES COTEC</span></p>
+          <h2 data-fr="Connecter aujourd’hui.<br><em>Construire demain.</em>" data-en="Connecting today.<br><em>Building tomorrow.</em>">Connecter aujourd’hui.<br><em>Construire demain.</em></h2>
+          <p data-fr="Fondée en 2022 par Nzanzu Katsuva Bienfait, Kambale Syavuvirira Joppy et Kambale Wasingya Thomas, COMFORT TECHNOLOGIES COTEC est une entreprise locale de technologie et de connectivité basée à Butembo, dans le Nord-Kivu. Nous accompagnons particuliers, entreprises et institutions avec des solutions fiables en accès Internet, installation réseau, maintenance et dépannage. Notre mission est simple : mettre la technologie au service de chacun, avec un accompagnement professionnel et des services pensés pour des connexions durables." data-en="Founded in 2022 by Nzanzu Katsuva Bienfait, Kambale Syavuvirira Joppy and Kambale Wasingya Thomas, COMFORT TECHNOLOGIES COTEC is a local technology and connectivity company based in Butembo, North Kivu. We support individuals, businesses and institutions with reliable solutions in internet access, network installation, maintenance and troubleshooting. Our mission is simple: to put technology at the service of everyone through professional support and services designed for lasting connectivity.">Fondée en 2022 par Nzanzu Katsuva Bienfait, Kambale Syavuvirira Joppy et Kambale Wasingya Thomas, COMFORT TECHNOLOGIES COTEC est une entreprise locale de technologie et de connectivité basée à Butembo, dans le Nord-Kivu. Nous accompagnons particuliers, entreprises et institutions avec des solutions fiables en accès Internet, installation réseau, maintenance et dépannage. Notre mission est simple : mettre la technologie au service de chacun, avec un accompagnement professionnel et des services pensés pour des connexions durables.</p>
+          <a class="text-link" href="#contact"><span data-fr="Votre partenaire en connectivité et solutions technologiques." data-en="Your partner in connectivity and technology solutions.">Votre partenaire en connectivité et solutions technologiques.</span><span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-learn section-pad" aria-label="Nos valeurs et engagements">
+      <div class="wrap">
+        <div class="about-learn-grid">
+          <article class="about-learn-card">
+            <img src="/assets/img/IMG_on_cotec.jpg" alt="Connexion Internet haut débit" loading="lazy">
+            <div class="about-learn-content">
+              <h3 data-fr="Notre mission" data-en="Our mission">Notre mission</h3>
+              <p data-fr="Faciliter l’accès à Internet et proposer des solutions réseau adaptées aux besoins des particuliers, des entreprises et des institutions." data-en="Facilitate internet access and offer network solutions tailored to the needs of individuals, businesses and institutions.">Faciliter l’accès à Internet et proposer des solutions réseau adaptées aux besoins des particuliers, des entreprises et des institutions.</p>
+            </div>
+          </article>
+
+          <article class="about-learn-card">
+            <img src="/assets/img/IMG_on_cotec5.jpg" alt="Support technique et installation réseau" loading="lazy">
+            <div class="about-learn-content">
+              <h3 data-fr="Notre expertise" data-en="Our expertise">Notre expertise</h3>
+              <p data-fr="Installation, configuration, maintenance et dépannage des équipements réseau, solutions Wi-Fi et systèmes de connectivité." data-en="Installation, configuration, maintenance and troubleshooting of network equipment, Wi-Fi solutions and connectivity systems.">Installation, configuration, maintenance et dépannage des équipements réseau, solutions Wi-Fi et systèmes de connectivité.</p>
+            </div>
+          </article>
+
+          <article class="about-learn-card">
+            <img src="/assets/img/IMG_on_cotec4.jpg" alt="Accompagnement technique" loading="lazy">
+            <div class="about-learn-content">
+              <h3 data-fr="Notre engagement" data-en="Our commitment">Notre engagement</h3>
+              <p data-fr="Accompagner nos clients avec sérieux, écoute et assistance technique afin de répondre à leurs besoins de connexion." data-en="Support clients with seriousness, listening and technical assistance to meet their connectivity needs.">Accompagner nos clients avec sérieux, écoute et assistance technique afin de répondre à leurs besoins de connexion.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section-pad" id="services">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span><span data-fr="NOS SERVICES" data-en="OUR SERVICES">NOS SERVICES</span></p>
+            <h2 data-fr="Des solutions pour<br><em>rester connectés.</em>" data-en="Solutions to keep<br><em>you connected.</em>">Des solutions pour<br><em>rester connectés.</em></h2>
+          </div>
+          <p class="section-intro" data-fr="De l’accès à Internet à l’installation des équipements réseau, COTEC vous accompagne avec des solutions adaptées à vos besoins, à la maison comme en entreprise." data-en="From internet access to installing network equipment, COTEC supports you with solutions tailored to your needs, at home and in business.">De l’accès à Internet à l’installation des équipements réseau, COTEC vous accompagne avec des solutions adaptées à vos besoins, à la maison comme en entreprise.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card service-featured">
+            <div class="service-photo photo-connectivity"></div>
+            <div class="service-content">
+              <span class="service-number">01 / CONNECTIVITÉ INTERNET</span>
+              <h3 data-fr="Accès à Internet haut débit" data-en="High-speed internet access">Accès à Internet haut débit</h3>
+              <p data-fr="Des solutions de connexion Internet pour les particuliers, les entreprises et les institutions, selon la couverture disponible dans votre zone." data-en="Internet connectivity solutions for individuals, businesses and institutions, depending on the coverage available in your area.">Des solutions de connexion Internet pour les particuliers, les entreprises et les institutions, selon la couverture disponible dans votre zone.</p>
+              <a class="round-link" href="#tarifs" aria-label="Voir les tarifs">↗</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo photo-starlink" style="background-image:url('/assets/img/OMG_on_cotec11.png')"></div>
+            <div class="service-content">
+              <span class="service-number">02 / INTERNET SATELLITE</span>
+              <h3 data-fr="Installation Starlink" data-en="Starlink installation">Installation Starlink</h3>
+              <p data-fr="Fourniture, installation et configuration des équipements Starlink pour accéder à Internet dans les zones adaptées à cette technologie." data-en="Supply, installation and configuration of Starlink equipment to access the internet in areas suited to this technology.">Fourniture, installation et configuration des équipements Starlink pour accéder à Internet dans les zones adaptées à cette technologie.</p>
+              <a class="round-link" href="#contact" aria-label="Demander une installation Starlink">↗</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo photo-wifi-longue-portee" style="background-image:url('/assets/img/OMG_on_cotec10.jpg')"></div>
+            <div class="service-content">
+              <span class="service-number">03 / RÉSEAUX SANS FIL</span>
+              <h3 data-fr="Antennes et Wi-Fi longue portée" data-en="Antennas and long-range Wi-Fi">Antennes et Wi-Fi longue portée</h3>
+              <p data-fr="Installation et configuration d’antennes LiteBeam, NanoStation, Cambium et de points d’accès pour établir ou étendre une couverture réseau." data-en="Installation and configuration of LiteBeam, NanoStation, Cambium antennas and access points to establish or extend network coverage.">Installation et configuration d’antennes LiteBeam, NanoStation, Cambium et de points d’accès pour établir ou étendre une couverture réseau.</p>
+              <a class="round-link" href="#contact" aria-label="En savoir plus sur le Wi-Fi longue portée">↗</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo photo-hotspot"></div>
+            <div class="service-content">
+              <span class="service-number">04 / ÉQUIPEMENTS INFORMATIQUES</span>
+              <h3 data-fr="Vente et configuration du matériel" data-en="Sales and equipment setup">Vente et configuration du matériel</h3>
+              <p data-fr="Fourniture et configuration d’équipements réseau, notamment des routeurs TP-Link, Tenda, WavLink et MikroTik, selon les besoins de votre installation." data-en="Supply and configuration of network equipment, including TP-Link, Tenda, WavLink and MikroTik routers according to your installation needs.">Fourniture et configuration d’équipements réseau, notamment des routeurs TP-Link, Tenda, WavLink et MikroTik, selon les besoins de votre installation.</p>
+              <a class="round-link" href="#contact" aria-label="Demander un équipement réseau">↗</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo photo-solar" style="background-image:url('/assets/img/OMG_on_cotec12.png')"></div>
+            <div class="service-content">
+              <span class="service-number">05 / VIDÉOSURVEILLANCE</span>
+              <h3 data-fr="Installation de caméras de surveillance" data-en="Security camera installation">Installation de caméras de surveillance</h3>
+              <p data-fr="Installation et configuration de systèmes de vidéosurveillance pour contribuer à la surveillance de vos espaces résidentiels et professionnels." data-en="Installation and configuration of CCTV systems to strengthen monitoring of residential and professional spaces.">Installation et configuration de systèmes de vidéosurveillance pour contribuer à la surveillance de vos espaces résidentiels et professionnels.</p>
+              <a class="round-link" href="#contact" aria-label="Demander une installation de vidéosurveillance">↗</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-photo photo-connectivity" style="background-image:url('/assets/img/IMG_on_cotec13.jpg')"></div>
+            <div class="service-content">
+              <span class="service-number">06 / MAINTENANCE &amp; ASSISTANCE</span>
+              <h3 data-fr="Une équipe d’accompagnement technique" data-en="A dedicated technical support team">Une équipe d’accompagnement technique</h3>
+              <p data-fr="Diagnostic, dépannage et maintenance des équipements réseau afin de contribuer au bon fonctionnement et à la fiabilité de votre installation." data-en="Diagnosis, troubleshooting and maintenance of network equipment to ensure the proper functioning and reliability of your installation.">Diagnostic, dépannage et maintenance des équipements réseau afin de contribuer au bon fonctionnement et à la fiabilité de votre installation.</p>
+              <a class="round-link" href="#contact" aria-label="Demander une assistance technique">↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="service-footer">
+          <div>
+            <p data-fr="Contactez notre équipe pour discuter de vos besoins et obtenir des informations sur nos services." data-en="Contact our team to discuss your needs and get information about our services.">Contactez notre équipe pour discuter de vos besoins et obtenir des informations sur nos services.</p>
+          </div>
+          <a class="text-link" href="#" data-whatsapp-key="technician_help" data-whatsapp-fallback="Bonjour COTEC, je viens du site et je souhaite parler à un technicien." target="_blank" rel="noopener noreferrer"><span data-fr="Parler à un technicien" data-en="Talk to a technician">Parler à un technicien</span><span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing section-pad" id="tarifs">
+      <div class="wrap pricing-grid point-to-point-grid">
+        <div class="pricing-copy">
+          <p class="eyebrow"><span></span><span data-fr="CONNECTIVITÉ POINT À POINT" data-en="POINT-TO-POINT CONNECTIVITY">CONNECTIVITÉ POINT À POINT</span></p>
+          <h2 data-fr="Une liaison dédiée,<br><em>entre vos sites.</em>" data-en="A dedicated link<br><em>between your sites.</em>">Une liaison dédiée,<br><em>entre vos sites.</em></h2>
+          <p data-fr="Reliez vos bâtiments, bureaux ou installations grâce à nos solutions de liaison sans fil point à point. Nous étudions la distance, les obstacles et vos besoins afin de vous proposer une installation adaptée." data-en="Connect your buildings, offices or facilities with our point-to-point wireless link solutions. We assess distance, obstacles and your requirements to recommend a suitable installation.">Reliez vos bâtiments, bureaux ou installations grâce à nos solutions de liaison sans fil point à point. Nous étudions la distance, les obstacles et vos besoins afin de vous proposer une installation adaptée.</p>
+          <a class="text-link" href="#services"><span data-fr="Découvrir nos solutions point à point" data-en="Discover our point-to-point solutions">Découvrir nos solutions point à point</span><span>↗</span></a>
+        </div>
+        <div class="price-card"><div class="price-top"><span class="price-tag" data-fr="ABONNEMENT INTERNET" data-en="INTERNET SUBSCRIPTION">ABONNEMENT INTERNET</span><span class="price-spark">✳</span></div><div class="price-amount"><span class="currency">$</span><span class="amount">30</span><span class="period" data-fr="/ mois<br>à partir de" data-en="/ month<br>starting at">/ mois<br>à partir de</span></div><div class="price-divider"></div><ul><li><span>✓</span><span data-fr="Accès Internet sur nos lignes" data-en="Internet access on our network">Accès Internet sur nos lignes</span></li><li><span>✓</span><span data-fr="Formule mensuelle" data-en="Monthly plan">Formule mensuelle</span></li><li><span>✓</span><span data-fr="Conseil selon votre usage" data-en="Advice based on your needs">Conseil selon votre usage</span></li></ul><a class="button button-dark" href="#" data-whatsapp-key="subscription_request" data-whatsapp-fallback="Bonjour COTEC, je souhaite m’abonner à Internet." target="_blank" rel="noopener"><span data-fr="M’abonner / demander les détails" data-en="Subscribe / get details">M’abonner / demander les détails</span><span>↗</span></a><small data-fr="Prix de départ communiqué par COTEC. Débit, couverture et installation à confirmer selon votre adresse." data-en="Starting price provided by COTEC. Speed, coverage and installation to be confirmed for your address.">Prix de départ communiqué par COTEC. Débit, couverture et installation à confirmer selon votre adresse.</small></div>
+      </div>
+    </section>
+
+    <section class="team section-pad" id="equipe"><div class="wrap team-grid"><div class="team-photo"><img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Deux techniciens travaillant sur une installation réseau" loading="lazy"><div class="team-photo-label"><span>CT / FIELD TEAM</span><span>01 — 03</span></div></div><div class="team-copy"><p class="eyebrow"><span></span><span data-fr="NOTRE EXPERTISE" data-en="OUR EXPERTISE">NOTRE EXPERTISE</span></p><h2 data-fr="Des solutions réseau<br><em>pensées pour vous.</em>" data-en="Network solutions<br><em>designed for you.</em>">Des solutions réseau<br><em>pensées pour vous.</em></h2><p data-fr="Chaque projet mérite une solution adaptée. Nous vous accompagnons de l’analyse de vos besoins à l’installation de vos équipements, avec une attention particulière portée à la performance, à la stabilité et à la qualité de votre connexion." data-en="Every project deserves a tailored solution. We support you from assessing your needs to installing your equipment, with a focus on performance, stability and connection quality.">Chaque projet mérite une solution adaptée. Nous vous accompagnons de l’analyse de vos besoins à l’installation de vos équipements, avec une attention particulière portée à la performance, à la stabilité et à la qualité de votre connexion.</p><div class="team-points"><div><span>01</span><div><strong data-fr="Étude & conseil" data-en="Assessment & advice">Étude & conseil</strong><p data-fr="Comprendre vos besoins et identifier la solution adaptée à votre environnement." data-en="Understand your needs and identify the right solution for your environment.">Comprendre vos besoins et identifier la solution adaptée à votre environnement.</p></div></div><div><span>02</span><div><strong data-fr="Installation & optimisation" data-en="Installation & optimization">Installation & optimisation</strong><p data-fr="Déployer et configurer vos équipements pour une connexion performante." data-en="Deploy and configure your equipment for a high-performing connection.">Déployer et configurer vos équipements pour une connexion performante.</p></div></div><div><span>03</span><div><strong data-fr="Assistance technique" data-en="Technical support">Assistance technique</strong><p data-fr="Vous accompagner pour maintenir votre réseau fiable et fonctionnel." data-en="Support you in keeping your network reliable and working smoothly.">Vous accompagner pour maintenir votre réseau fiable et fonctionnel.</p></div></div></div><a class="button button-dark" href="#contact"><span data-fr="Contacter notre équipe" data-en="Contact our team">Contacter notre équipe</span><span>↗</span></a></div></div></section>
+
+    <section class="comment-section section-pad" data-comments-root>
+      <div class="wrap comments-shell">
+        <div class="comment-header">
+          <div>
+            <p class="eyebrow"><span></span><span data-fr="AVIS CLIENTS" data-en="CLIENT REVIEWS">AVIS CLIENTS</span></p>
+            <h2 data-fr="Ce que nos clients disent de l’expérience COTEC." data-en="What our clients say about the COTEC experience.">Ce que nos clients disent de l’expérience COTEC.</h2>
+          </div>
+          <p data-fr="Des retours vérifiés et une expérience de service pensée pour les particuliers comme pour les entreprises." data-en="Verified feedback and a service experience designed for both individuals and businesses.">Des retours vérifiés et une expérience de service pensée pour les particuliers comme pour les entreprises.</p>
+        </div>
+
+        <div class="comments-layout">
+          <div class="comment-list" aria-live="polite"></div>
+
+          <aside class="comment-panel">
+            <form class="comment-form" id="comment-form" novalidate>
+              <h3 data-fr="Laisser un commentaire" data-en="Leave a comment">Laisser un commentaire</h3>
+              <label>
+                <span data-fr="Votre avis" data-en="Your feedback">Votre avis</span>
+                <textarea name="comment" rows="5" maxlength="220" placeholder="Décrivez votre expérience avec COTEC…" required></textarea>
+              </label>
+              <div class="comment-form__actions">
+                <button class="comment-form__submit" type="submit" data-fr="Publier" data-en="Publish">Publier</button>
+              </div>
+              <p class="comment-form__notice" aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <div class="wrap footer-top">
+        <a class="brand brand-footer" href="index.html"><img class="brand-logo" src="/assets/img/logo-lockup.png" alt="COMFORT TECHNOLOGIES COTEC" width="640" height="152"></a>
+        <div class="footer-message">
+          <p data-fr="Connectés à votre avenir." data-en="Connected to your future.">Connectés à votre avenir.</p>
+          <div class="footer-socials" aria-label="Réseaux sociaux">
+          <a class="social-icon" href="https://wa.me/243817483857" target="_blank" rel="noopener noreferrer" aria-label="Contacter COTEC sur WhatsApp au +243 817 483 857" title="WhatsApp · +243 817 483 857">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.78 11.78 0 0 0 12.13 0C5.58 0 .25 5.32.25 11.87c0 2.1.55 4.15 1.6 5.96L.15 24l6.33-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.15-3.5-8.42ZM12.14 21.75a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.76.99 1-3.66-.24-.38a9.84 9.84 0 0 1-1.52-5.24c0-5.46 4.44-9.9 9.91-9.9a9.84 9.84 0 0 1 7.01 2.9 9.84 9.84 0 0 1 2.9 7.01c0 5.47-4.45 9.91-9.91 9.91Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.8-1.49-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+          </a>
+          <a class="social-icon" href="https://www.linkedin.com/company/cotec-drc?originalSubdomain=cd" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn COTEC DRC" title="LinkedIn · COTEC DRC">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 3.25a2.05 2.05 0 1 1-.02 4.1 2.05 2.05 0 0 1 .02-4.1ZM3.42 9h3.56v11.5H3.42V9Zm5.78 0h3.41v1.57h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.43v6.35h-3.56v-5.63c0-1.34-.02-3.07-1.87-3.07-1.88 0-2.17 1.46-2.17 2.97v5.73H9.2V9Z"/></svg>
+          </a>
+          <a class="social-icon" href="https://www.facebook.com/michael.mongo.3" target="_blank" rel="noopener noreferrer" aria-label="Facebook COTEC" title="Facebook · COTEC">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 21v-8.2h2.76l.41-3.2H13.7V7.56c0-.93.26-1.56 1.6-1.56h1.7V3.14c-.3-.04-1.33-.14-2.53-.14-2.5 0-4.2 1.53-4.2 4.34V9.6H7.45v3.2h2.82V21h3.43Z"/></svg>
+          </a>
+          <a class="social-icon" href="https://www.tiktok.com/@confort.technolog?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok COMFORT TECHNOLOGIES COTEC" title="TikTok · @confort.technolog">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 7.1a5.2 5.2 0 0 1-3.2-1.1v7.1a6.4 6.4 0 1 1-5.5-6.3v3.6a2.9 2.9 0 1 0 1.9 2.7V2.5h3.6a5.2 5.2 0 0 0 3.2 4.6v0Z"/></svg>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© <span id="year"></span> COMFORT TECHNOLOGIES COTEC · BUTEMBO, NORD-KIVU</span>
+        <span data-fr="Connectivité · Réseaux · Énergie" data-en="Connectivity · Networks · Energy">Connectivité · Réseaux · Énergie</span>
+        <a class="back-top" href="index.html" aria-label="Retour à l’accueil">↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <div class="finder-form-feedback" id="finder-form-feedback" role="alert" aria-live="assertive" hidden>
+    <span class="finder-form-feedback__text"></span>
+    <button class="finder-form-feedback__close" type="button" aria-label="Fermer le message">×</button>
+  </div>
+
+  <div class="account-modal" id="account-modal" hidden>
+    <div class="account-modal__backdrop" data-close-account="true"></div>
+    <div class="account-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="account-modal-title">
+      <div class="account-modal__header">
+        <div>
+          <p class="eyebrow"><span></span><span data-fr="MON COMPTE" data-en="MY ACCOUNT">MON COMPTE</span></p>
+          <h3 id="account-modal-title" data-fr="Connexion rapide" data-en="Quick login">Connexion rapide</h3>
+        </div>
+        <button class="account-modal__close" type="button" aria-label="Fermer" data-close-account="true">×</button>
+      </div>
+      <form class="account-modal__form" id="account-form" data-auth-mode="login">
+        <button class="google-auth-btn" type="button">
+          <svg class="google-auth-btn__icon" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.7 1.22 9.2 3.59l6.85-6.85C35.9 2.38 30.43 0 24 0 14.63 0 6.53 5.38 2.56 13.22l7.98 6.2C12.13 13.73 17.56 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.5 24.55c0-1.56-.14-3.05-.4-4.48H24v8.48h12.78c-.54 2.8-2.14 5.17-4.58 6.76l7.4 5.74c4.31-3.96 6.9-9.8 6.9-17.5z"/>
+            <path fill="#FBBC05" d="M32.2 35.9c-2.45 1.65-5.57 2.6-8.2 2.6-6.43 0-11.86-4.23-13.8-9.9l-7.96-6.2C-1.14 30.68 2.42 42 12.2 48c5.47 3.42 12.6 5.06 19.07 4.12 3.74-.57 7.3-2.05 10.3-4.36l-9.37-7.86z"/>
+            <path fill="#34A853" d="M24 48c5.45 0 10.03-1.8 13.38-4.93l-7.4-5.74c-2.08 1.41-4.74 2.17-5.98 2.17-6.44 0-11.87-4.23-13.8-9.9l-7.98 6.2C2.69 41.86 11.48 48 24 48z"/>
+          </svg>
+          <span data-fr="Continuer avec Google" data-en="Continue with Google">Continuer avec Google</span>
+        </button>
+        <div class="auth-divider"><span data-fr="ou" data-en="or">ou</span></div>
+        <label class="account-modal__field account-modal__field--username">
+          <span data-fr="Nom d’utilisateur" data-en="Username">Nom d’utilisateur</span>
+          <input type="text" name="username" placeholder="Nom d’utilisateur" autocomplete="username">
+        </label>
+        <label>
+          <span data-fr="Adresse e-mail" data-en="Email address">Adresse e-mail</span>
+          <input type="email" name="email" placeholder="vous@example.com" required>
+        </label>
+        <label>
+          <span data-fr="Mot de passe" data-en="Password">Mot de passe</span>
+          <input type="password" name="password" placeholder="••••••••" required>
+        </label>
+        <label class="account-modal__field account-modal__field--confirm-password">
+          <span data-fr="Confirmer le mot de passe" data-en="Confirm password">Confirmer le mot de passe</span>
+          <input type="password" name="confirmPassword" placeholder="Confirmer le mot de passe">
+        </label>
+        <div class="account-modal__actions">
+          <button class="account-modal__submit" type="submit" data-fr="Se connecter" data-en="Log in">Se connecter</button>
+          <button class="account-modal__secondary" type="button" data-mode="signup" data-fr="Créer un compte" data-en="Create account">Créer un compte</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <a class="whatsapp-float" href="#" target="_blank" rel="noopener noreferrer" data-whatsapp-key="technician_help" data-whatsapp-fallback="Bonjour COTEC, je viens du site et je souhaite parler à un technicien." aria-label="Contacter COTEC sur WhatsApp au +243 817 483 857" title="WhatsApp · +243 817 483 857">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.78 11.78 0 0 0 12.13 0C5.58 0 .25 5.32.25 11.87c0 2.1.55 4.15 1.6 5.96L.15 24l6.33-1.66a11.9 11.9 0 0 0 5.65 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.15-3.5-8.42ZM12.14 21.75a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.76.99 1-3.66-.24-.38a9.84 9.84 0 0 1-1.52-5.24c0-5.46 4.44-9.9 9.91-9.9a9.84 9.84 0 0 1 7.01 2.9 9.84 9.84 0 0 1 2.9 7.01c0 5.47-4.45 9.91-9.91 9.91Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.8-1.49-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+  </a>
+
+  <script>
+    window.COTEC_USE_LOCAL_AUTH = true;
+    window.COTEC_SUPABASE = null;
+  </script>
+  <script>setTimeout(function(){var l=document.getElementById("app-loader");if(l)l.remove();},9000);</script>
+  <script type="module" src="/assets/js/comment-utils.js"></script>
+  <script src="/assets/js/app.js" defer></script>
+  <script src="/assets/js/motion.js" defer></script>
+  <script src="/assets/js/cotec-ai.js"></script>
+</body>
+</html>

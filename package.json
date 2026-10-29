@@ -1,0 +1,18 @@
+{
+  "name": "cotec-comfort-technologies",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Site COMFORT TECHNOLOGIES COTEC avec assistante IA (Grok / secours local)",
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "mysql2": "^3.12.0"
+  }
+}

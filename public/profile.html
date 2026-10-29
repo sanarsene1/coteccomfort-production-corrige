@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon profil · COTEC</title>
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <style>
+      :root {
+        --cotec-bg: #f3f7f1;
+        --cotec-ink: #12281d;
+        --cotec-muted: #5c6d65;
+        --cotec-card: #ffffff;
+        --cotec-line: rgba(18, 40, 29, 0.09);
+        --cotec-primary: #153526;
+        --cotec-primary-soft: #edf6ee;
+        --cotec-danger: #c92d3c;
+        --cotec-danger-soft: #ffecef;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Inter", "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #eef6ef 0%, #f7faf7 100%);
+        color: var(--cotec-ink);
+      }
+
+      .profile-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 20px;
+      }
+
+      .profile-shell {
+        width: min(980px, 100%);
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(21, 53, 38, 0.08);
+        border-radius: 28px;
+        box-shadow: 0 26px 60px rgba(14, 31, 22, 0.08);
+        backdrop-filter: blur(2px);
+        overflow: hidden;
+      }
+
+      .profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 28px 30px 24px;
+        border-bottom: 1px solid var(--cotec-line);
+        background: linear-gradient(135deg, #f6faf7 0%, #edf4ef 100%);
+      }
+
+      .profile-user {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        min-width: 0;
+      }
+
+      .profile-avatar-wrap {
+        position: relative;
+      }
+
+      .profile-avatar {
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        border: 4px solid rgba(255, 255, 255, 0.9);
+        box-shadow: 0 14px 24px rgba(17, 39, 29, 0.12);
+        user-select: none;
+        overflow: hidden;
+        background: linear-gradient(135deg, #dff1ea, #b5d6c7);
+        color: var(--cotec-primary);
+      }
+
+      .profile-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .profile-upload {
+        position: absolute;
+        right: -6px;
+        bottom: -4px;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        background: var(--cotec-primary);
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 10px 18px rgba(21, 53, 38, 0.18);
+      }
+
+      .profile-upload input {
+        display: none;
+      }
+
+      .profile-meta {
+        min-width: 0;
+      }
+
+      .profile-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: #eaf4ee;
+        color: var(--cotec-primary);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .profile-name {
+        margin: 12px 0 4px;
+        font-family: "Manrope", "Segoe UI", sans-serif;
+        font-size: clamp(28px, 4vw, 42px);
+        letter-spacing: -0.06em;
+        line-height: 1.05;
+      }
+
+      .profile-email {
+        margin: 0;
+        color: var(--cotec-muted);
+        font-size: 15px;
+      }
+
+      .profile-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .profile-btn {
+        border: 1px solid transparent;
+        min-height: 46px;
+        padding: 0 18px;
+        border-radius: 999px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .profile-btn.primary {
+        background: var(--cotec-primary);
+        color: #fff;
+      }
+
+      .profile-btn.primary:hover { filter: brightness(1.05); }
+
+      .profile-btn.secondary {
+        background: #f3f7f1;
+        border-color: var(--cotec-line);
+        color: var(--cotec-primary);
+      }
+
+      .profile-btn.danger {
+        background: var(--cotec-danger-soft);
+        border-color: rgba(201, 45, 60, 0.15);
+        color: var(--cotec-danger);
+      }
+
+      .profile-body {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 22px;
+        padding: 26px 30px 30px;
+      }
+
+      .profile-card,
+      .profile-panel {
+        background: var(--cotec-card);
+        border: 1px solid var(--cotec-line);
+        border-radius: 22px;
+        padding: 22px;
+      }
+
+      .card-title {
+        margin: 0 0 18px;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .profile-form {
+        display: grid;
+        gap: 18px;
+      }
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .profile-field {
+        display: grid;
+        gap: 8px;
+      }
+
+      .profile-field label {
+        font-size: 11px;
+        color: var(--cotec-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        font-weight: 700;
+      }
+
+      .profile-field input {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid rgba(18, 40, 29, 0.12);
+        border-radius: 14px;
+        background: #f8faf7;
+        color: var(--cotec-ink);
+        padding: 0 14px;
+        font-size: 15px;
+        outline: none;
+        transition: border 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .profile-field input:focus {
+        border-color: rgba(21, 53, 38, 0.3);
+        box-shadow: 0 0 0 4px rgba(21, 53, 38, 0.06);
+      }
+
+      .profile-field input:disabled {
+        background: #f0f4f1;
+        color: #5c6d65;
+        cursor: not-allowed;
+      }
+
+      .profile-field.wide {
+        grid-column: 1 / -1;
+      }
+
+      .profile-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 6px;
+      }
+
+      .profile-panel ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .profile-panel li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: #f7faf8;
+        border: 1px solid var(--cotec-line);
+      }
+
+      .profile-panel li strong {
+        font-size: 14px;
+      }
+
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 28px;
+        padding: 0 10px;
+        border-radius: 999px;
+        background: #eaf4ee;
+        color: var(--cotec-primary);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      @media (max-width: 760px) {
+        .profile-header,
+        .profile-body {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        .profile-header {
+          padding: 24px 20px;
+        }
+
+        .profile-body {
+          padding: 20px;
+        }
+
+        .profile-actions {
+          width: 100%;
+          justify-content: flex-start;
+        }
+
+        .profile-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile-page">
+      <main class="profile-shell" aria-label="Profil utilisateur COTEC">
+        <header class="profile-header">
+          <div class="profile-user">
+            <div class="profile-avatar-wrap">
+              <div class="profile-avatar" id="profile-avatar" aria-label="Photo de profil"></div>
+              <label class="profile-upload" for="avatar-input" title="Modifier la photo">
+                <span aria-hidden="true">＋</span>
+                <input id="avatar-input" type="file" accept="image/*">
+              </label>
+            </div>
+            <div class="profile-meta">
+              <span class="profile-kicker">Compte actif</span>
+              <h1 class="profile-name" id="profile-name">Mon profil</h1>
+              <p class="profile-email" id="profile-email">email@example.com</p>
+            </div>
+          </div>
+
+          <div class="profile-actions">
+            <button class="profile-btn secondary" id="edit-profile-btn" type="button">Modifier mes informations</button>
+            <button class="profile-btn danger" id="profile-logout" type="button">Se déconnecter</button>
+          </div>
+        </header>
+
+        <div class="profile-body">
+          <section class="profile-card">
+            <h2 class="card-title">Informations du compte</h2>
+            <form id="profile-form" class="profile-form">
+              <div class="profile-grid">
+                <div class="profile-field">
+                  <label for="profile-username">Nom d’utilisateur</label>
+                  <input id="profile-username" name="username" type="text" value="" disabled>
+                </div>
+                <div class="profile-field">
+                  <label for="profile-email-input">E-mail</label>
+                  <input id="profile-email-input" name="email" type="email" value="" disabled>
+                </div>
+                <div class="profile-field wide">
+                  <label for="profile-password">Nouveau mot de passe</label>
+                  <input id="profile-password" name="password" type="password" placeholder="Laissez vide pour garder le mot de passe actuel" disabled>
+                </div>
+              </div>
+
+              <div class="profile-footer">
+                <button class="profile-btn secondary hidden" id="cancel-profile-btn" type="button">Annuler</button>
+                <button class="profile-btn primary hidden" type="submit">Enregistrer</button>
+              </div>
+            </form>
+          </section>
+
+          <aside class="profile-panel">
+            <h2 class="card-title">Résumé</h2>
+            <ul>
+              <li>
+                <strong>Statut</strong>
+                <span class="status-pill">En ligne</span>
+              </li>
+              <li>
+                <strong>Accès</strong>
+                <span>Client COTEC</span>
+              </li>
+              <li>
+                <strong>Dernière mise à jour</strong>
+                <span id="profile-last-update">Aujourd’hui</span>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const profileForm = document.getElementById('profile-form');
+      const profileName = document.getElementById('profile-name');
+      const profileEmail = document.getElementById('profile-email');
+      const profileEmailInput = document.getElementById('profile-email-input');
+      const profileUsernameInput = document.getElementById('profile-username');
+      const profilePasswordInput = document.getElementById('profile-password');
+      const profileAvatar = document.getElementById('profile-avatar');
+      const editProfileBtn = document.getElementById('edit-profile-btn');
+      const cancelProfileBtn = document.getElementById('cancel-profile-btn');
+      const avatarInput = document.getElementById('avatar-input');
+      const profileLogout = document.getElementById('profile-logout');
+      const profileLastUpdate = document.getElementById('profile-last-update');
+
+      function getStoredUser() {
+        try {
+          return JSON.parse(localStorage.getItem('cotec-auth-user') || 'null') || null;
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function getCurrentUserName() {
+        const user = getStoredUser();
+        if (!user) return 'Client';
+        return String(user.username || user.email?.split('@')[0] || 'Client').trim() || 'Client';
+      }
+
+      function getInitialsFromName(name) {
+        const normalized = String(name || '').trim();
+        if (!normalized) return 'C';
+        const parts = normalized.split(/\s+/).filter(Boolean);
+        if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+        return (parts[0][0] + parts[1][0]).toUpperCase();
+      }
+
+      function getAvatarPalette(seed) {
+        const palettes = [
+          ['#d8f0ff', '#2a6ea6'],
+          ['#ffe7d9', '#b76a32'],
+          ['#fce7ec', '#c95b6a'],
+          ['#e9f7d8', '#4a8b3d'],
+          ['#f0e7ff', '#6945a0'],
+          ['#ffe9a8', '#9b6a00'],
+          ['#dffaf0', '#1e7d6d'],
+          ['#ffd8d8', '#9f3a3a']
+        ];
+        const index = Math.abs(String(seed || '').split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)) % palettes.length;
+        return palettes[index];
+      }
+
+      function setProfileEditable(isEditable) {
+        const inputs = [profileUsernameInput, profileEmailInput, profilePasswordInput];
+        inputs.forEach((input) => {
+          input.disabled = !isEditable;
+        });
+
+        const submitButtons = profileForm.querySelectorAll('button[type="submit"], #cancel-profile-btn');
+        submitButtons.forEach((button) => button.classList.toggle('hidden', !isEditable));
+      }
+
+      function renderProfileAvatar(name, avatarDataUrl) {
+        const [bg, fg] = getAvatarPalette(name);
+        if (avatarDataUrl) {
+          profileAvatar.innerHTML = `<img src="${avatarDataUrl}" alt="Photo de profil">`;
+          profileAvatar.style.background = bg;
+          profileAvatar.style.color = fg;
+          return;
+        }
+
+        profileAvatar.innerHTML = '';
+        profileAvatar.textContent = getInitialsFromName(name);
+        profileAvatar.style.background = bg;
+        profileAvatar.style.color = fg;
+      }
+
+      function renderProfile() {
+        const user = getStoredUser();
+        if (!user) {
+          window.location.href = '/account.html';
+          return;
+        }
+
+        const name = getCurrentUserName();
+        const email = user.email || '';
+        const avatarDataUrl = localStorage.getItem('cotec-profile-avatar');
+
+        profileName.textContent = name;
+        profileEmail.textContent = email;
+        profileUsernameInput.value = name;
+        profileEmailInput.value = email;
+        profilePasswordInput.value = '';
+        profileLastUpdate.textContent = new Date().toLocaleDateString('fr-FR', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric'
+        });
+
+        renderProfileAvatar(name, avatarDataUrl);
+        setProfileEditable(false);
+      }
+
+      editProfileBtn.addEventListener('click', () => {
+        setProfileEditable(true);
+      });
+
+      cancelProfileBtn.addEventListener('click', () => {
+        renderProfile();
+      });
+
+      profileLogout.addEventListener('click', () => {
+        localStorage.removeItem('cotec-auth');
+        localStorage.removeItem('cotec-auth-user');
+        localStorage.removeItem('cotec-auth-token');
+        localStorage.removeItem('cotec-profile-avatar');
+        window.location.href = '/index.html';
+      });
+
+      profileForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const user = getStoredUser();
+        if (!user) return;
+
+        const nextName = profileUsernameInput.value.trim() || getCurrentUserName();
+        const nextEmail = profileEmailInput.value.trim() || user.email;
+        const password = profilePasswordInput.value.trim();
+
+        const updatedUser = {
+          ...user,
+          username: nextName,
+          email: nextEmail,
+          ...(password ? { password } : {})
+        };
+
+        localStorage.setItem('cotec-auth-user', JSON.stringify(updatedUser));
+        profilePasswordInput.value = '';
+        renderProfile();
+      });
+
+      avatarInput.addEventListener('change', (event) => {
+        const [file] = event.target.files || [];
+        if (!file) return;
+
+        if (!file.type.startsWith('image/')) {
+          alert('Veuillez choisir une image valide.');
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = () => {
+          const dataUrl = String(reader.result || '');
+          localStorage.setItem('cotec-profile-avatar', dataUrl);
+          renderProfile();
+        };
+        reader.readAsDataURL(file);
+      });
+
+      renderProfile();
+    </script>
+  </body>
+</html>
