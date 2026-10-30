@@ -10,14 +10,6 @@ services:
         value: production
       - key: PORT
         value: 10000
-      - key: AI_PROVIDER
-        value: gemini
-      - key: AI_API_KEY
-        sync: false
-      - key: AI_BASE_URL
-        value: https://generativelanguage.googleapis.com/v1beta
-      - key: AI_MODEL
-        value: gemini-2.5-flash
       - key: DB_HOST
         sync: false
       - key: DB_PORT

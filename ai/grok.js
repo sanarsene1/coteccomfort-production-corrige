@@ -23,12 +23,12 @@ export function aiConfig() {
     || rawBaseUrl.includes('localhost:11434')
     || rawBaseUrl.includes('ollama.com')
     || rawBaseUrl.includes('ollama');
-  const kind = isOllama ? 'ollama' : (isGemini ? 'gemini' : 'gemini');
-  const configuredModel = process.env.AI_MODEL || (isOllama ? 'gemma4:cloud' : 'gemini-3.8-flash');
+  const kind = isOllama ? 'ollama' : (isGemini ? 'gemini' : 'ollama');
+  const configuredModel = process.env.AI_MODEL || (isOllama ? 'gemma4:cloud' : 'gemma4:cloud');
   return {
     provider: kind,
     apiKey: process.env.AI_API_KEY || process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || process.env.XAI_API_KEY || '',
-    baseUrl: (rawBaseUrl || (isOllama ? 'http://127.0.0.1:11434' : 'https://generativelanguage.googleapis.com/v1beta')).replace(/\/+$/, ''),
+    baseUrl: (rawBaseUrl || (isOllama ? 'http://127.0.0.1:11434' : 'http://127.0.0.1:11434')).replace(/\/+$/, ''),
     model: configuredModel
   };
 }
